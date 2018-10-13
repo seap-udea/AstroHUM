@@ -6,7 +6,7 @@ from astroquery.vizier import Vizier
 import numpy as np
 
 ##########################################################
-#AQUÍ ESTA LA ROPA SUCIA
+#AQUI ESTA LA ROPA SUCIA
 ##########################################################
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #RUTINAS NUMERICAS
