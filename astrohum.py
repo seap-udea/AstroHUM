@@ -6,10 +6,21 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #PAQUETES EXTERNOS
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#Colaboratory
 from google.colab import drive,files
-from astroquery.vizier import Vizier
-from astropy.coordinates import Angle
+
+#Paquetes numericos
 import numpy as np
+
+#Astropy
+from astropy.io import fits
+from astropy.coordinates import Angle
+
+#Astroquery
+from astroquery.vizier import Vizier
+
+#Paquetes graficos
+import matplotlib.pyplot as plt
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 #RUTINAS
