@@ -30,7 +30,7 @@ def matriz(a):
 
 def sex2dec(s):
     """
-    Convierte un ángulo expresado en sexagesimal a su expresión en decimal.
+    Convierte un angulo expresado en sexagesimal a su expresión en decimal.
 
     Ejemplo: sex2dec("23 03 45") devuelve 23.0625
     """
