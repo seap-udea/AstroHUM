@@ -8,6 +8,7 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 from google.colab import drive,files
 from astroquery.vizier import Vizier
+from astropy.coordinates import Angle
 import numpy as np
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,6 +24,16 @@ def fuentes(img,fwhm=3.0,umbral=5.0):
     daofind=DAOStarFinder(fwhm=fwhm,threshold=umbral*std)
     sources=daofind(img-median)
     return sources
+
+def convertidor(infofits):
+    from astropy import wcs
+    w=wcs.WCS(naxis=2)
+    w.wcs.crpix=np.array([info["CRPIX1"],info["CRPIX2"]])
+    w.wcs.cdelt=np.array([info["CDELT1"],info["CDELT2"]])
+    w.wcs.crval=np.array([info["CRVAL1"],info["CRVAL2"]])
+    w.wcs.ctype=[info["CTYPE1"],info["CTYPE2"]]
+    c=lambda x:w.wcs_pix2world(x,0)
+    return c
 
 ##########################################################
 #AQUÍ ESTA LA ROPA SUCIA
