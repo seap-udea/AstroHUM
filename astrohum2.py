@@ -1,21 +1,7 @@
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#PAQUETES EXTERNOS
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 from google.colab import drive,files
 from astroquery.vizier import Vizier
 import numpy as np
-
-##########################################################
-#AQUI ESTA LA ROPA SUCIA
-##########################################################
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#RUTINAS NUMERICAS
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 def matriz(a):
-    """
-    Convierte un arreglo estructurado en un arreglo plano
-    """
-    import numpy as np
     a=np.array(a)
     dt = a.dtype
     dt = dt.descr
@@ -29,11 +15,6 @@ def matriz(a):
     return a
 
 def sex2dec(s):
-    """
-    Convierte un angulo expresado en sexagesimal a su expresión en decimal.
-
-    Ejemplo: sex2dec("23 03 45") devuelve 23.0625
-    """
     d=np.sign(float(s.split()[0]))*(np.array([np.abs(float(x)) for x in s.split()]).dot([1.0,1/60.0,1/3600.]).sum())
     return d
 
