@@ -8,3 +8,6 @@ commit:
 pull:
 	git reset --hard HEAD
 	git pull origin master
+
+install:
+	pip install astropy
