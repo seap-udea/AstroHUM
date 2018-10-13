@@ -13,3 +13,5 @@ install:
 	pip install astropy
 	pip install --no-deps photutils
 	pip install astroquery
+	apt-get install imagemagick
+	find . -name "astrohum.py" -exec cp {} \;
