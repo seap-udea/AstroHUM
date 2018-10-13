@@ -25,7 +25,7 @@ def fuentes(img,fwhm=3.0,umbral=5.0):
     sources=daofind(img-median)
     return sources
 
-def convertidor(infofits):
+def convertidor(info):
     from astropy import wcs
     w=wcs.WCS(naxis=2)
     w.wcs.crpix=np.array([info["CRPIX1"],info["CRPIX2"]])
