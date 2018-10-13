@@ -11,3 +11,5 @@ pull:
 
 install:
 	pip install astropy
+	pip install --no-deps photutils
+	pip install astroquery
