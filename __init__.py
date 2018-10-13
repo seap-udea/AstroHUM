@@ -1,0 +1,1 @@
+constante=1
